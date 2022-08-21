@@ -1,2 +1,2 @@
-from src.emailClass import email
-from src.news import news
+from src.newsClass import News
+from src.emailClass import Email

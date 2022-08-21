@@ -1,5 +1,4 @@
 import newsapi
-from emailClass import email
 from bs4 import BeautifulSoup
 import requests
 import lxml 
@@ -8,7 +7,7 @@ import time
 import os
 
 
-class news:
+class News:
 
   newsSources = {'The Wall Street Journal' : 'the-wall-street-journal',
                  'BBC News' : 'bbc-news',

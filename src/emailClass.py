@@ -4,7 +4,7 @@ from email.message import EmailMessage
 import datetime
 import time
 
-class email:
+class Email:
 
   EMAIL_USER = os.environ.get('pythonEmailUser')
   EMAIL_PSWD = os.environ.get('pythonEmailPSWD')
