@@ -53,6 +53,10 @@ pythonEmailUser = 'example@email.com'
 ```
 pythonEmailPSWD = 'examplePassword'
 ```
+- Set the NewsAPI API key
+```
+newsAPIKey = 'example key'
+```
 
 ### Run
 ```
