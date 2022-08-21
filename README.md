@@ -22,9 +22,9 @@ Tennis News: [Tennis.com](https://www.tennis.com/)
 Tennis Scores: [ESPN](http://m.espn.com/general/tennis/dailyresults?wjb)
 
 ## Technologies and Libraries Used
-- [NewsAPI](https://newsapi.org/) (Obtains data from news sources)
-- Beautiful Soup (Web scraper)
-- smtplib (Sends the email)
+- [NewsAPI](https://newsapi.org/)
+- Beautiful Soup
+- smtplib
 - requests
 
 ## Usage
