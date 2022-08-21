@@ -123,7 +123,7 @@ class News:
       for data in soup.find_all("p"):
         text = data.text
         #if date is found write p tag content into file and mark bool value so that you can write the next p tag in the next iteration
-        if text.find(day) != -1: 
+        if text.find(day) != -1 and text.find("See stories from") == -1: 
           file.write(text + '\n')
           link = data.a
           file.write(link.get('href') + '\n')
