@@ -1,6 +1,5 @@
 import os
 import smtplib
-import imghdr
 from email.message import EmailMessage
 import datetime
 import time
