@@ -1,5 +1,4 @@
-import news as n
-import emailClass as e
+import src
 import os
 
 EMAIL_ADDRESS = os.environ.get('pythonEmailUser')
@@ -7,13 +6,13 @@ EMAIL_ADDRESS = os.environ.get('pythonEmailUser')
 
 # sends a newsletter to the given email
 def sendNewsLetter(emailAddress:str):
-  newsLetter = n.news()
+  newsLetter = src.news()
   newsLetter.getNews(newsLetter.headlinesFile, newsLetter.newsSources, newsLetter.headlinesTitle)
   newsLetter.getNews(newsLetter.SciTechFile, newsLetter.SciTechSources, newsLetter.SciTechTitle)
   newsLetter.getCovidNews()
   newsLetter.getTennisNews()
   newsLetter.getTennisScores()
-  mail = e.email(emailAddress)
+  mail = src.email(emailAddress)
   headlines = mail.getMessage(newsLetter.headlinesFile)
   SciTechNews = mail.getMessage(newsLetter.SciTechFile)
   covidNews = mail.getMessage(newsLetter.covidFile)
