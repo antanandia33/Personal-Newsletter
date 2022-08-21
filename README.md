@@ -1,7 +1,7 @@
 # Personal Newsletter 📰
 
 ## Overview
-This python script sends an email to the email desired address containing the top headlines of the day, technology and media news, a COVID-19 update, and daily tennis news and ATP tennis scores.  
+This python script sends an email to the desired email address containing the top headlines of the day, technology and media news, a COVID-19 update, and daily tennis news and ATP tennis scores.  
 
 ### News Sources
 
