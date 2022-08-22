@@ -1,7 +1,6 @@
 import newsapi
 from bs4 import BeautifulSoup
 import requests
-import lxml 
 from datetime import date
 import time
 import os
@@ -185,7 +184,15 @@ class News:
       tags = soup.find_all('div', {"class":"ind"})
 
       # only iterates between 1 and the length-13 to only get match info
+      # only gets information about the top tournament
+      count = 0
+      tournamentNameTag = ['ind', 'sub', 'bold']
       for tag in tags[1:(len(tags)-13)]:
+        if tag.get("class") == tournamentNameTag:
+          count+=1
+          if count > 1: break
+        if tag.text.find("FULL TOURNAMENT RESULTS") != -1:
+          continue
         if (tag.find('b')):
           result = tag.find('b')
           if result != None:
