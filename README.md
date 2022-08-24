@@ -27,6 +27,10 @@ Tennis Scores: [ESPN](http://m.espn.com/general/tennis/dailyresults?wjb)
 - smtplib
 - requests
 
+## Example Email
+![emailEx](READMEIMAGES/emailExample.jpg)
+![emailEx2](READMEIMAGES/emailExamplecont.png)
+
 ## Usage
 
 ### Requirements
@@ -63,7 +67,5 @@ newsAPIKey = 'example key'
 ```
 python newsLetter.py
 ```
-## Example Email
-![emailEx](READMEIMAGES/emailExample.jpg)
-![emailEx2](READMEIMAGES/emailExamplecont.png)
+
 
