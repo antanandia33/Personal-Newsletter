@@ -38,26 +38,33 @@ class News:
       and url of the top headlines from a dictionary of
       given news sources into headlines.txt using newsapi"""
   def getNews(self, fileName:str, sources:dict, title:str):
-
+    
+    connection = False
     with open(fileName, 'w', encoding="utf-8") as file:
-
       file.write(title + '\n' + '\n')
-      try:
-        for name, source in sources.items():
-          data = self.newsapi.get_top_headlines(sources=source, page = 1, page_size=100)
-          article = data["articles"]
+      for x in range(0, 10):
+        try:
+          for name, source in sources.items():
+            data = self.newsapi.get_top_headlines(sources=source, page = 1, page_size=100)
+            article = data["articles"]
 
-          file.write(name + '\n')
-          count = 0
-          for ar in article:
-            if count == 1: break
-            file.write(ar['title'] + '\n')
-            file.write(ar['description'] + "\n")
-            file.write(ar['url']  + '\n' + '\n'+ '\n')
-            count += 1
-      except:
-        print("NewsAPI Error")
-        file.write("NewsAPI Error" + '\n' + '\n'+ '\n')
+            file.write(name + '\n')
+            count = 0
+            for ar in article:
+              if count == 1: break
+              file.write(ar['title'] + '\n')
+              file.write(ar['description'] + "\n")
+              file.write(ar['url']  + '\n' + '\n'+ '\n')
+              count += 1
+          connection = True
+          print("NewsAPI connection successful " + fileName)
+          return
+        except:
+          print("NewsAPI Error " + fileName)
+          time.sleep(5)
+        else:
+          break
+      if not connection: file.write("NewsAPI Error" + '\n' + '\n'+ '\n')
 
 
 
